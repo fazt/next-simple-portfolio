@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import { useRouter } from "next/router";
-import { posts } from "../profile";
+import { posts } from "@/profile";
 
 const Post = () => {
   const router = useRouter();
@@ -8,6 +8,15 @@ const Post = () => {
   const currentPost = posts.filter(
     (post) => post.title === router.query.title
   )[0];
+
+  if (!currentPost) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    }
+  } 
 
   return (
     <Layout title={router.query.title} footer={false}>
