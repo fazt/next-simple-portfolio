@@ -22,8 +22,8 @@ const Index = () => (
                 iste consequuntur enim reprehenderit architecto consectetur cum?
                 Totam ad molestias natus illum illo officia.
               </p>
-              <Link href="/hireme">
-                <a className="btn btn-outline-light">Hire Me</a>
+              <Link href="/hireme" className="btn btn-outline-light">
+                Hire Me
               </Link>
             </div>
           </div>
@@ -82,8 +82,8 @@ const Index = () => (
                 </li>
               ))}
             </ul>
-            <Link href="/hireme">
-              <a className="btn btn-light">Know More</a>
+            <Link href="/hireme" className="btn btn-light">
+              Know More
             </Link>
           </div>
         </div>
@@ -102,11 +102,7 @@ const Index = () => (
                 <div className="col-md-4 p-2" key={index}>
                   <div className="card h-100">
                     <div className="overflow">
-                      <img
-                        src={`/${image}`}
-                        alt=""
-                        className="card-img-top"
-                      />
+                      <img src={`/${image}`} alt="" className="card-img-top" />
                     </div>
                     <div className="card-body">
                       <h3>{name}</h3>
@@ -119,8 +115,8 @@ const Index = () => (
 
               <div className="col-md-12 mt-4">
                 <div className="text-center">
-                  <Link href="/portfolio">
-                    <a className="btn btn-outline-light">More Projects</a>
+                  <Link href="/portfolio" className="btn btn-outline-light">
+                    More Projects
                   </Link>
                 </div>
               </div>

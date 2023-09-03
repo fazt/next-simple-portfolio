@@ -4,8 +4,8 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
-        <Link href="/">
-          <a className="navbar-brand">Simple Portfolio</a>
+        <Link href="/" className="navbar-brand">
+          Simple Portfolio
         </Link>
         <button
           className="navbar-toggler"
@@ -21,17 +21,17 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link href="/blog">
-                <a className="nav-link active" aria-current="page">
-                  Blog
-                </a>
+              <Link
+                href="/blog"
+                className="nav-link active"
+                aria-current="page"
+              >
+                Blog
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/github">
-                <a className="nav-link">
-                 Github 
-                </a>
+              <Link href="/github" className="nav-link">
+                Github
               </Link>
             </li>
           </ul>
