@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Navbar } from "./Navbar";
 import PropTypes from "prop-types";

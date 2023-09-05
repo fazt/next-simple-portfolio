@@ -1,5 +1,5 @@
 # Next Simple Portfolio
-![](./screenshot.png)
+![](./docs/screenshot.png)
 
 # Tools
 
