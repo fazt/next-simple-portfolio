@@ -1,12 +1,13 @@
 # Next Simple Portfolio
+
+This is a simple portfolio made with Next.js (app Router), Tailwind CSS and MDX.
+
 ![](./docs/screenshot.png)
 
-# Tools
+### Features
 
-- Nextjs
-- Bootswatch 4
+These are some of the features that I've implemented in this project:
 
-## Resources
-
-- [NProgress change color](https://github.com/rstacruz/nprogress/issues/187)
-- [Nextjs 100%](https://gist.github.com/dmurawsky/d45f068097d181c733a53687edce1919)
+- Progress Bar
+- Dark mode
+- MDX

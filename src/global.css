@@ -2,19 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
-html,
-body,
-body > div:first-child,
-div#__next,
-div#__next > div {
-  height: 100%;
+body * {
+  @apply transition-colors duration-100;
 }
 
-.overflow {
+/* .overflow {
   height: 50%;
   overflow: hidden;
-}
+} */
 
 .overflow .card-img-top {
   transform: scale(1);
@@ -23,13 +18,4 @@ div#__next > div {
 
 .overflow .card-img-top:hover {
   transform: scale(1.8);
-}
-
-#nprogress .bar {
-  background: #ff5367 !important;
-}
-
-#nprogress .spinner-icon {
-  border-top-color: #ffbb00;
-  border-left-color: #ffbb00;
 }

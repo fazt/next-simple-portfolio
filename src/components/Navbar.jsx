@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SwitchTheme } from "./SwitchTheme";
 
 export const Navbar = () => {
   return (
@@ -17,6 +18,9 @@ export const Navbar = () => {
             <Link href="/github" className="nav-link">
               Github
             </Link>
+          </li>
+          <li>
+            <SwitchTheme />
           </li>
         </ul>
       </div>

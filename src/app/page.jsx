@@ -1,5 +1,4 @@
 "use client";
-import Layout from "@/components/Layout";
 
 import { Skills } from "@/components/Skills";
 import { Portofolio } from "@/components/Portfolio";
