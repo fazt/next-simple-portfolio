@@ -1,26 +1,37 @@
 import "../global.css";
-import "animate.css/animate.min.css";
-import { Open_Sans } from "next/font/google";
+import { Playfair_Display, Source_Sans_3 } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { GlobalProviders } from "@/context/GlobalProviders";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "My Portfolio",
-  description: "This is my personal Portofolio",
+  title: "Ryan Ray | Portfolio",
+  description: "Full Stack Developer Portfolio",
 };
 
-const openSans = Open_Sans({
-  subsets: ["latin-ext"],
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
 });
 
 function RootLayout({ children }) {
   return (
-    <html>
-      <body className={"dark:bg-zinc-900 " + openSans.className}>
+    <html className={`${playfair.variable} ${sourceSans.variable}`}>
+      <body
+        className="font-[family-name:var(--font-body)] antialiased"
+        style={{ background: "var(--bg-primary)", color: "var(--text-primary)" }}
+      >
+        <div className="noise-overlay" aria-hidden="true" />
         <GlobalProviders>
           <Navbar />
-          <main className="container mx-auto mt-3">{children}</main>
+          <main className="max-w-6xl mx-auto px-6 md:px-8 py-8">{children}</main>
           <Footer />
         </GlobalProviders>
       </body>

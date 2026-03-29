@@ -26,13 +26,18 @@ export function SwitchTheme() {
 
   return (
     <button
-      className="hover:opacity-50 hover:cursor-pointer"
+      className="relative w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer"
+      style={{
+        background: "var(--bg-secondary)",
+        border: "1px solid var(--border)",
+      }}
       onClick={() => handleTheme()}
+      aria-label="Toggle theme"
     >
       {theme === "light" ? (
-        <MoonIcon className="h-6 w-6" />
+        <MoonIcon className="h-4 w-4" style={{ color: "var(--text-secondary)" }} />
       ) : (
-        <SunIcon className="h-6 w-6 text-sky-300" />
+        <SunIcon className="h-4 w-4" style={{ color: "var(--accent)" }} />
       )}
     </button>
   );

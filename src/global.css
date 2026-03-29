@@ -2,20 +2,127 @@
 @tailwind components;
 @tailwind utilities;
 
-body * {
-  @apply transition-colors duration-100;
+@layer base {
+  :root {
+    --bg-primary: #f8f7f4;
+    --bg-secondary: #f0efe8;
+    --bg-card: #ffffff;
+    --text-primary: #1a1a1f;
+    --text-secondary: #555560;
+    --text-muted: #8a8a96;
+    --accent: #c8a46e;
+    --accent-light: #dfc9a0;
+    --accent-dark: #a07d42;
+    --border: #e2e0d5;
+    --gradient-hero: linear-gradient(135deg, #f8f7f4 0%, #f0efe8 50%, #e8e4d8 100%);
+    --noise-opacity: 0.03;
+  }
+
+  .dark {
+    --bg-primary: #0a0a0d;
+    --bg-secondary: #111114;
+    --bg-card: #1a1a1f;
+    --text-primary: #f0efe8;
+    --text-secondary: #a0a0ab;
+    --text-muted: #6a6a76;
+    --accent: #c8a46e;
+    --accent-light: #dfc9a0;
+    --accent-dark: #a07d42;
+    --border: #2a2a30;
+    --gradient-hero: linear-gradient(135deg, #0a0a0d 0%, #111118 50%, #0f0f14 100%);
+    --noise-opacity: 0.04;
+  }
+
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #0a0a0d;
+  }
 }
 
-/* .overflow {
-  height: 50%;
-  overflow: hidden;
-} */
+@layer components {
+  .noise-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 50;
+    opacity: var(--noise-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 200px;
+  }
 
-.overflow .card-img-top {
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-[0.25em] mb-6;
+    color: var(--accent);
+  }
+
+  .card-elevated {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    @apply rounded-2xl overflow-hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-elevated:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.12);
+  }
+
+  .dark .card-elevated:hover {
+    box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.5);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, var(--accent-dark), var(--accent), var(--accent-light));
+  }
+
+  .divider-accent {
+    @apply w-12 h-0.5 rounded-full mb-6;
+    background: linear-gradient(90deg, var(--accent), transparent);
+  }
+
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+  .stagger-7 { animation-delay: 0.7s; }
+}
+
+.overflow-hidden .card-img-top {
   transform: scale(1);
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.overflow .card-img-top:hover {
-  transform: scale(1.8);
+.overflow-hidden:hover .card-img-top {
+  transform: scale(1.08);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-dark);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
 }
