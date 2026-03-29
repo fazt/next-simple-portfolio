@@ -38,6 +38,15 @@ export const Navbar = () => {
                 Github
               </Link>
             </li>
+            <li>
+              <Link
+                href="/contact"
+                className="hover:opacity-100 transition-opacity duration-300 uppercase tracking-[0.15em]"
+                style={{ color: "var(--text-secondary)", opacity: 0.8 }}
+              >
+                Contact
+              </Link>
+            </li>
           </ul>
           <div
             className="w-px h-5"

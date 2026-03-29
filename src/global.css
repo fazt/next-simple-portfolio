@@ -11,9 +11,9 @@
   --color-surface-950: #0a0a0d;
 
   /* Colors: accent */
-  --color-accent: #c8a46e;
-  --color-accent-light: #dfc9a0;
-  --color-accent-dark: #a07d42;
+  --color-accent: #56b5d6;
+  --color-accent-light: #8ed0e8;
+  --color-accent-dark: #2d8faf;
 
   /* Animations */
   --animate-fade-up: fadeUp 0.6s ease-out forwards;
@@ -43,8 +43,8 @@
   }
 
   @keyframes glow {
-    0% { box-shadow: 0 0 20px rgba(200,164,110,0.15); }
-    100% { box-shadow: 0 0 40px rgba(200,164,110,0.3); }
+    0% { box-shadow: 0 0 20px rgba(86,181,214,0.15); }
+    100% { box-shadow: 0 0 40px rgba(86,181,214,0.3); }
   }
 }
 
@@ -59,9 +59,9 @@
   --text-primary: #1a1a1f;
   --text-secondary: #555560;
   --text-muted: #8a8a96;
-  --accent: #c8a46e;
-  --accent-light: #dfc9a0;
-  --accent-dark: #a07d42;
+  --accent: #56b5d6;
+  --accent-light: #8ed0e8;
+  --accent-dark: #2d8faf;
   --border: #e2e0d5;
   --gradient-hero: linear-gradient(135deg, #f8f7f4 0%, #f0efe8 50%, #e8e4d8 100%);
   --noise-opacity: 0.03;
@@ -74,9 +74,9 @@
   --text-primary: #f0efe8;
   --text-secondary: #a0a0ab;
   --text-muted: #6a6a76;
-  --accent: #c8a46e;
-  --accent-light: #dfc9a0;
-  --accent-dark: #a07d42;
+  --accent: #56b5d6;
+  --accent-light: #8ed0e8;
+  --accent-dark: #2d8faf;
   --border: #2a2a30;
   --gradient-hero: linear-gradient(135deg, #0a0a0d 0%, #111118 50%, #0f0f14 100%);
   --noise-opacity: 0.04;
